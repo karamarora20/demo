@@ -1,0 +1,47 @@
+<html>
+<body>
+<script>
+function btn_enter(event){
+const element= event.target;
+
+document.getElementbyId('display').innerHTML= element.Name
+}
+function btn_calculate(){
+	myRegex=\/s\g;
+	element= document.getElementbyId('display');
+	var stack= element.InnerHTML.match(myRegex);
+	const ans=0;
+	for(let i=0;i<stack.length;i++{
+	if(stack[i]=='+'){
+	ans= stack[i-1]+stack[i+1]
+	}
+
+	}
+	element.InnerHTML=ans;
+
+}
+
+</script>
+
+<div>
+<div id="display"></div>
+<div>
+<button name="1" onclick="btn_enter(event)">1</button>
+<button name="2" onclick="btn_enter(event)">2</button>
+<button name="3" onclick="btn_enter(event)">3</button>
+<button name="4" onclick="btn_enter(event)">4</button>
+<button name="5" onclick="btn_enter(event)">5</button>
+<button name="6" onclick="btn_enter(event)">6</button>
+<button name="7" onclick="btn_enter(event)">7</button>
+<button name="8" onclick="btn_enter(event)">8</button>
+<button name="9" onclick="btn_enter(event)">9</button>
+<button name="+" onclick="btn_enter(event)">+</button>
+<button name="-" onclick="btn_enter(event)">-</button>
+
+<button name="*" onclick="btn_enter(event)">*</button>
+<button name="=" onclick='btn_calculate()'>=</button>
+
+</div>
+</div>
+</body>
+</html>
